@@ -39,6 +39,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 .body {
      margin: 0em;
 }
+
 .page {
     width: 100vw;
     height: 100vh;
@@ -49,9 +50,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 0;
     background-color: hsl(0,0%,100%);
 }
+
   .page:target {
     left: 0vw;
     z-index: 1;
+}
+   img, object{
+     max-height:90%;
+     max-width:90%;
 }
 </style>
 
@@ -61,10 +67,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
 
-	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML canvas tag.</canvas>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">Your browser does not support the HTML canvas tag.</canvas>
 
 	<p><button onclick="rectangleDisplay();" class="w3-btn w3-black"> rectangle </button></p>
 	<p><button onclick="nameDisplay();" class="w3-btn w3-black"> name </button></p>
@@ -79,7 +83,7 @@ Your browser does not support the HTML canvas tag.</canvas>
 	<p>DIY!</p>
 </footer>
 
-<script>
+	<script>
 		function rectangleDisplay() {
 			var c = document.getElementById("myCanvas");
   			var ctx = c.getContext("2d");
@@ -108,6 +112,6 @@ Your browser does not support the HTML canvas tag.</canvas>
   			var ctx = c.getContext("2d");
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 		}
-</script>
+	</script>
 </body>
 </html>
