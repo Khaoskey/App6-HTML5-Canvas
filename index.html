@@ -70,6 +70,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">Your browser does not support the HTML canvas tag.</canvas>
 
+	<!--buttons and their functions-->
 	<p><button onclick="rectangleDisplay();" class="w3-btn w3-black"> rectangle </button></p>
 	<p><button onclick="nameDisplay();" class="w3-btn w3-black"> name </button></p>
 	<p><button onclick="imageDisplay();" class="w3-btn w3-black"> image </button></p>
@@ -84,6 +85,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </footer>
 
 	<script>
+		//code that creates the rectangle
 		function rectangleDisplay() {
 			var c = document.getElementById("myCanvas");
   			var ctx = c.getContext("2d");
@@ -92,12 +94,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     			ctx.stroke();
 		}
 
+		//code that sets up the name on the canvas
 		function nameDisplay(){
 			var c = document.getElementById("myCanvas");
   			var ctx = c.getContext("2d");
             		ctx.font = "30px Arial";
 			ctx.fillText("Hello World", 10, 70);
         	}
+		//code that sets up the image
 		function imageDisplay(){
 			var c = document.getElementById("myCanvas");
   			var ctx = c.getContext("2d");
@@ -107,6 +111,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     			};
 			img.src = "https://static.vecteezy.com/system/resources/previews/002/098/203/non_2x/silver-tabby-cat-sitting-on-green-background-free-photo.jpg";
 		}
+		//sets up the code to clear the canvas
 		function clearDisplay(){
 			var c = document.getElementById("myCanvas");
   			var ctx = c.getContext("2d");
